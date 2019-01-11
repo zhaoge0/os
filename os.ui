@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OS</class>
+ <widget class="QWidget" name="OS">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>935</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OS</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="layctl">
+     <item>
+      <widget class="QLabel" name="label_tip">
+       <property name="text">
+        <string>执行次数</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="startButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>开始</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>暂停</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="contihButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>下一步</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1" rowspan="4">
+    <layout class="QVBoxLayout" name="lay_proc">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_remind">
+       <property name="text">
+        <string>提示：操作系统已占用0号进程，以及16个单位内存</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_input">
+       <item>
+        <widget class="QLabel" name="label_proc">
+         <property name="text">
+          <string>进程标识</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pidEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_input_2">
+       <item>
+        <widget class="QLabel" name="label_proc_2">
+         <property name="text">
+          <string>需要时间</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="timeEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_input_3">
+       <item>
+        <widget class="QLabel" name="label_proc_3">
+         <property name="text">
+          <string>优先数  </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="prioEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_input_4">
+       <item>
+        <widget class="QLabel" name="label_proc_4">
+         <property name="text">
+          <string>占用内存</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="memEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_input_5">
+       <item>
+        <widget class="QLabel" name="label_proc_5">
+         <property name="text">
+          <string>前驱进程</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="preprocEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_input_6">
+       <item>
+        <widget class="QLabel" name="label_proc_6">
+         <property name="text">
+          <string>后继进程</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="nextprocEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="lay_ope">
+       <item>
+        <widget class="QPushButton" name="addButton">
+         <property name="text">
+          <string>添加</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="suspendButton">
+         <property name="text">
+          <string>挂起</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="activeButton">
+         <property name="text">
+          <string>解挂</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_speed">
+       <property name="text">
+        <string>执行速度</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="speedSlider">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>19</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_free">
+     <property name="text">
+      <string>空闲分区表</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTableWidget" name="freetableWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>150</height>
+      </size>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>起始地址</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>分区长度</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <layout class="QVBoxLayout" name="layproc">
+     <item>
+      <widget class="QLabel" name="label_pcb">
+       <property name="text">
+        <string>进程信息</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="pcbtableWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+         <horstretch>1</horstretch>
+         <verstretch>8</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>800</width>
+         <height>0</height>
+        </size>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>50</number>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>进程标识</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>状态</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>需要运行时间</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>优先数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>内存起始地址</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>占用内存大小</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>属性</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>前驱进程</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>后继进程</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <zorder>label_free</zorder>
+  <zorder>freetableWidget</zorder>
+  <zorder></zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
